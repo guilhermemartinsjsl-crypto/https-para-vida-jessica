@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para você, Jéssica ❤</title>
+
+  <!-- Fontes (letra de carta e letra normal) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Corações flutuando no fundo -->
+  <div id="coracoes"></div>
+
+  <!-- ===================== TELA 1: NOME ===================== -->
+  <section id="tela-nome" class="tela ativa">
+    <div class="cartao">
+      <h1>Oi, meu amor 💖</h1>
+      <p>Preparei algo especial. Para continuar, digite seu primeiro nome:</p>
+      <input type="text" id="campo-nome" placeholder="Seu primeiro nome" autocomplete="off">
+      <button id="botao-entrar">Entrar</button>
+      <p id="mensagem-erro"></p>
+    </div>
+  </section>
+
+  <!-- ===================== TELA 2: ENVELOPE ===================== -->
+  <section id="tela-envelope" class="tela">
+    <div class="area-envelope">
+      <p class="titulo-envelope">Chegou uma carta para você 💌</p>
+
+      <div class="envelope" id="envelope">
+        <div class="env-fundo"></div>
+        <div class="env-carta"><span>Para: Jéssica ❤</span></div>
+        <div class="env-frente"></div>
+        <div class="env-aba"></div>
+        <button class="selo" id="selo" aria-label="Abrir a carta"><span>J</span></button>
+      </div>
+
+      <p class="dica" id="dica">Clique no selo para abrir ✨</p>
+    </div>
+  </section>
+
+  <!-- ===================== TELA 3: CARTA ===================== -->
+  <section id="tela-carta" class="tela">
+    <article class="papel">
+
+      <h1 class="saudacao revelar">Oi, Vida.</h1>
+
+      <!-- TEXTO DA CARTA -->
+      <p class="texto revelar">
+        Eu criei essa automação porque queria usar a tecnologia para te mostrar
+        um pouquinho do tamanho do meu amor por você e de como você é preciosa para mim.
+      </p>
+
+      <p class="texto revelar">
+        Quero que você nunca se esqueça de que, mesmo depois de tudo o que já passamos juntos,
+        eu continuo acreditando em cada sonho que construímos. A nossa hora vai chegar.
+        Você ainda vai viver tudo aquilo que eu te prometi, e eu vou estar ao seu lado
+        para comemorar cada conquista, cada vitória e cada momento especial.
+      </p>
+
+      <!-- As fotos entram aqui automaticamente (configure no script.js) -->
+      <div class="galeria revelar" id="galeria"></div>
+
+      <p class="texto revelar">
+        Você é a pessoa mais importante da minha vida. É quem me dá força para continuar,
+        quem ilumina os meus dias e quem faz tudo valer a pena. Eu quero estar com você
+        todos os dias, dividir os sorrisos, os desafios, os planos e os momentos simples
+        que se tornam incríveis só porque são ao seu lado.
+      </p>
+
+      <p class="texto revelar">
+        Obrigado por existir, por cuidar de mim, por acreditar em nós
+        e por fazer parte da minha história.
+      </p>
+
+      <p class="assinatura revelar"><strong>Te amo, bochechinha. ❤️</strong></p>
+    </article>
+  </section>
+
+  <!-- Foto ampliada (abre ao clicar numa foto) -->
+  <div id="ampliar" class="ampliar">
+    <img id="foto-ampliada" alt="Foto ampliada">
+  </div>
+
+  <!-- MÚSICA: arquivo "nossa-musica" dentro da pasta "musica" -->
+  <audio id="musica" loop preload="auto">
+    <source src="musica/nossa-musica.mp3" type="audio/mpeg">
+    <source src="musica/nossa-musica.mpeg" type="audio/mpeg">
+    <source src="musica/nossa-musica.m4a" type="audio/mp4">
+    <source src="musica/nossa-musica.mp4" type="audio/mp4">
+    <source src="musica/nossa-musica.wav" type="audio/wav">
+    <source src="musica/nossa-musica.ogg" type="audio/ogg">
+  </audio>
+
+  <!-- Botão para pausar/tocar a música (aparece quando a carta abre) -->
+  <button id="botao-musica" class="botao-musica" aria-label="Tocar ou pausar a música">🎵</button>
+
+  <!-- Aviso caso a música não carregue -->
+  <div id="aviso-musica" class="aviso-musica"></div>
+
+  <!-- Código -->
+  <script src="script.js"></script>
+</body>
+</html>
